@@ -1,0 +1,13 @@
+{
+  "name": "personal-finance-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "powershell.exe -NoProfile -Command \"$server = Start-Process -FilePath node -ArgumentList 'server/index.js' -PassThru; try { npm.cmd --prefix client run dev } finally { if ($server) { Stop-Process -Id $server.Id -ErrorAction SilentlyContinue } }\"",
+    "dev:client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "dev:server": "node server/index.js",
+    "start:server": "node server/index.js"
+  }
+}
